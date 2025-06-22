@@ -1,0 +1,161 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Students For Refugees - University of Houston</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/">
+                <img src="SFR_logo.png" alt="SFR Logo" id="logo"> </a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#news">News</a></li>
+                <li><a href="#events">Events</a></li>
+                <li><a href="#volunteer">Volunteer</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="home autoBlur autoShow">
+            <div class="home-content">
+                <h1 class="title">Students For Refugees</h1>
+                <span class="subtitle">University of Houston Chapter</span>
+                <p>A student-led organization focused on raising awareness and educating the public about the global refugee crisis through volunteering, advocacy, and community support.</p>
+            </div>
+        </section>
+        <section class="about autoBlur autoShow" id="about">
+            <div class="about-content">
+                <h2>About</h2>
+                <p>We are dedicated to supporting refugees by raising awareness, educating the public, and providing hands-on assistance through various initiatives and events.</p>
+            </div>
+        </section>
+        <section class="news autoBlur autoShow" id="news">
+            <div class="news-content">
+                <div class="news">
+                    <img src="img/WENR-0622-Response-Campaign-iStock-1399186008-740x440-1.png">
+                    <h2 class="newstitle">News Title</h2>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                    <a href="" class="newsbutton">Read Story</a>
+                </div>
+
+                <div class="news">
+                    <img src="img/WENR-0622-Response-Campaign-iStock-1399186008-740x440-1.png">
+                    <h2 class="newstitle">News Title</h2>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                    <a href="" class="newsbutton">Read Story</a>
+                </div>
+
+                <div class="news">
+                    <img src="img/WENR-0622-Response-Campaign-iStock-1399186008-740x440-1.png">
+                    <h2 class="newstitle">News Title</h2>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                    <a href="" class="newsbutton">Read Story</a>
+                </div>
+            </div>
+        </section>
+        <section class="events autoBlur autoShow" id="events">
+            <div class="events-content">
+                <h2>Events</h2>
+                <p>See our upcoming events here!</p>
+                <div class="eventbox">
+                    <div class="eventscalendar">
+                        <iframe src="https://calendar.google.com/calendar/embed?src=your_calendar_id&ctz=your_time_zone" style="border: 0" width="90%" height="600" frameborder="0" scrolling="no"></iframe>
+                    </div>
+                </div>
+            </div>
+           <div class="eventsheroimage">
+           </div>
+        </section>
+        <section class="volunteer autoBlur autoShow" id="volunteer">
+            <div class="volunteer-content">
+                <div class="eventsimages">
+                    <div class="imagebox">
+                        <img src="img/DSCF2673.jpg" alt="Event Image 1" class="image">
+                    </div>
+                    <div class="imagebox">
+                        <img src="img/DSCF2711.jpg" alt="Event Image 1" class="image">
+                    </div>
+                    <div class="imagebox">
+                        <img src="img/DSCF2705.jpg" alt="Event Image 1" class="image">
+                    </div>
+                    <div class="imagebox">
+                        <img src="img/DSCF2770.jpg" alt="Event Image 1" class="image">
+                    </div>
+                    <div class="imagebox">
+                        <img src="img/DSCF2705.jpg" alt="Event Image 1" class="image">
+                    </div>
+                    <div class="imagebox">
+                        <img src="img/DSCF2724.jpg" alt="Event Image 1" class="image">
+                    </div>
+                    <div class="imagebox">
+                        <img src="img/DSCF2735.jpg" alt="Event Image 1" class="image">
+                    </div>
+                    <div class="imagebox">
+                        <img src="img/DSCF2797.jpg" alt="Event Image 1" class="image">
+                    </div>
+                    <div class="imagebox">
+                        <img src="img/DSCF2807.jpg" alt="Event Image 1" class="image">
+                    </div>
+                </div>
+                <h2>Volunteer</h2>
+                <p>Join us in our mission to support refugees and their families by volunteering your time and skills.</p>
+                <form>
+                    <input name="name" id="name" placeholder="Name" class="input">
+                    <input name="email" id="email" placeholder="Email" class="input">
+                </form>
+                <button type="submit" form="form1" value="Submit" class="sharebtn">Submit</button>
+            </div>
+        </section>
+        <footer class="footer">
+            <p>Contact Us</p>
+            <div class="social-icons">
+                <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:someone@example.com"><i class="fas fa-envelope"></i></a>
+            </div>
+        </footer>
+    </main>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    fetch('data.json')
+        .then(response => response.json())
+        .then(data => {
+            const lineChartCtx = document.getElementById('lineChart').getContext('2d');
+            const doughnutChartCtx = document.getElementById('doughnutChart').getContext('2d');
+
+            new Chart(lineChartCtx, {
+                type: 'line',
+                data: data.lineChartData,
+                options: {
+                    responsive: true,
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+
+            new Chart(doughnutChartCtx, {
+                type: 'doughnut',
+                data: data.doughnutChartData,
+                options: {
+                    responsive: true
+                }
+            });
+        });
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,360 @@
+
+.roboto-<uniquifier> {
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;a
+}
+
+body {
+    font-family: "Roboto", Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f5f5f5;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    background: rgba(200, 16, 46, 0.95);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(5px);
+}
+
+html {
+    scroll-padding-top: 80px;
+}
+
+img {
+    max-width: 100%;
+}
+
+h1 {
+    font-size: 2.5em;
+    color: #b3002d;
+}
+
+h2 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+#logo {
+    height: 55px;
+    width: 55px;
+    object-fit: cover;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+    display: block;
+    margin: 0 auto;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    min-width: fit-content;
+}
+
+nav li {
+    margin: 0 15px;
+    display: flex;
+    align-items: center;
+}
+
+nav li:first-child {
+    margin-left: 20px;
+    min-width: 55px;
+}
+
+nav a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s, border 0.3s;
+    font-weight: 600;
+    font-size: 1.4em;
+}
+
+nav a:hover {
+    background: #000;
+}
+
+nav li:first-child a:hover {
+    background: none;
+}
+
+#logo:hover {
+    transform: scale(1.1);
+}
+
+main {
+    padding-top: 60px;
+}
+
+.home {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: white center / cover no-repeat url('img/kamal-and-his-family-are-among-the-thousands-of-refugees-who-have-fled-myanmar-since-august-2017.jpg');
+    padding: 80px 20px;
+}
+
+.home-content {
+    width: 100%;
+    max-width: 600px;
+    color: white;
+    background: rgba(0, 0, 0, 0.95);
+    padding: 40px;
+    margin: 0 auto;
+    backdrop-filter: blur(5px);
+}
+
+@media screen and (min-width: 768px) {
+    .home-content {
+        width: 45%;
+        margin: 0;
+        padding: 50px 40px 50px 60px;
+    }
+}
+
+.title {
+    margin: 0;
+    font-size: 4em;
+    color: white;
+}
+
+.subtitle {
+    color: #C8102E;
+    font-size: 1.3em;
+    font-weight: 800;
+}
+
+p {
+    font-size: 1.2em;
+    margin: 20px 0;
+}
+
+button {
+    background: #b3002d;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+button:hover {
+    background: #b3002d;
+}
+
+.about, .news, .events, .volunteer {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.about {
+    background: #FFF9D9;
+    color: #333;
+    justify-content: center;
+}
+
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about p {
+    font-size: 1.7em;
+    line-height: 1.6;
+}
+
+.news {
+    width: 100%;
+}
+
+.news-content {
+    display: flex;
+    margin: auto;
+    padding: 70px 0;
+    width: 100%;
+    gap: 80px;
+}
+
+.news {
+    margin: auto;
+    width: 900px;
+}
+
+.newstitle {
+    margin: 0;
+    font-size: 1.5em;
+}
+
+.news p {
+    margin: 0 0 30px;
+    line-height: 1.5;
+}
+
+.newsbutton {
+    margin-top: 70px;
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+    background: #960C22;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.newsbutton:hover {
+    background: black;
+}
+
+.events {
+    display: flex;
+    text-align: center;
+    min-height: 100vh;
+}
+
+.events-content {
+    width: 50%;
+    padding: 40px;
+}
+
+.eventbox {
+    display: flex;
+    justify-content: center;
+}
+
+.eventscalendar {
+    width: 100%;
+}
+
+.eventsheroimage {
+    width: 50%;
+    background: center / cover no-repeat url('img/DSCF2754.jpg');
+}
+
+.eventsimages {
+    display: flex;
+    margin: auto;
+    width: 50%;
+    flex-wrap: wrap;
+}
+
+.imagebox {
+    flex: 33%;
+    position: relative;
+}
+
+.image {
+    display: block;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.volunteer {
+    padding: 30px 0;
+    text-align: center;
+    background: #FFF9D9;
+}
+
+.volunteer-content {
+    margin: auto;
+    width: 80%;
+}
+
+.input {
+    display: block;
+    margin: 0 auto 20px;
+    width: 300px;
+    height: 40px;
+}
+
+.input::placeholder {
+    font-size: 1.5em;
+}
+
+.footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    background-color: #b3002d; 
+    padding: 20px 0;
+    text-align: center;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+.footer p {
+    font-size: 1.5em;
+    margin: 0 0 10px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-icons a {
+    color: #000;
+    font-size: 2em;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #555;
+}
+
+.autoBlur {
+    animation: autoBlurAnimation linear both;
+    animation-timeline: view();
+}
+
+@keyframes autoBlurAnimation {
+    0% {
+        filter: blur(30px);
+    }
+    35%, 65% {
+        filter: blur(0px);
+    }
+    100% {
+        filter: blur(30px);
+    }
+}
+
+.autoShow {
+    animation: autoShowAnimation linear both;
+    animation-timeline: view(70% 5%);
+}
+
+@keyframes autoShowAnimation {
+    from {
+        opacity: 0;
+        transform: translateY(200px) scale(0.3);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0px) scale(1);
+    }
+}
