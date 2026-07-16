@@ -39,26 +39,26 @@
         </section>
         <section class="news autoBlur autoShow" id="news">
             <div class="news-content">
-                
+
                 <div class="news">
-                    <img src="img/WENR-0622-Response-Campaign-iStock-1399186008-740x440-1.png">
+                    <img src="img/WENR-0622-Response-Campaign-iStock-1399186008-740x440-1.png" alt="News story thumbnail">
                     <h2 class="newstitle">News Title</h2>
                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                    <a href="" class="newsbutton">Read Story</a>
+                    <a href="#" class="newsbutton">Read Story</a>
                 </div>
 
                 <div class="news">
-                    <img src="img/WENR-0622-Response-Campaign-iStock-1399186008-740x440-1.png">
+                    <img src="img/WENR-0622-Response-Campaign-iStock-1399186008-740x440-1.png" alt="News story thumbnail">
                     <h2 class="newstitle">News Title</h2>
                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                    <a href="" class="newsbutton">Read Story</a>
+                    <a href="#" class="newsbutton">Read Story</a>
                 </div>
 
                 <div class="news">
-                    <img src="img/WENR-0622-Response-Campaign-iStock-1399186008-740x440-1.png">
+                    <img src="img/WENR-0622-Response-Campaign-iStock-1399186008-740x440-1.png" alt="News story thumbnail">
                     <h2 class="newstitle">News Title</h2>
                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                    <a href="" class="newsbutton">Read Story</a>
+                    <a href="#" class="newsbutton">Read Story</a>
                 </div>
             </div>
         </section>
@@ -68,103 +68,64 @@
                 <p>See our upcoming events here!</p>
                 <div class="eventbox">
                     <div class="eventscalendar">
-                        <iframe src="https://calendar.google.com/calendar/embed?src=your_calendar_id&ctz=your_time_zone" style="border: 0" width="90%" height="600" frameborder="0" scrolling="no"></iframe>
+                        <!-- TODO: replace your_calendar_id and your_time_zone with real values from Google Calendar embed settings -->
+                        <iframe src="https://calendar.google.com/calendar/embed?src=your_calendar_id&ctz=your_time_zone" title="SFR Events Calendar" style="border: 0" width="90%" height="600" frameborder="0" scrolling="no"></iframe>
                     </div>
                 </div>
             </div>
-           <div class="eventsheroimage">
+           <div class="eventsheroimage" role="img" aria-label="Students For Refugees volunteers at an event">
            </div>
         </section>
         <section class="volunteer autoBlur autoShow" id="volunteer">
             <div class="volunteer-content">
                 <div class="eventsimages">
                     <div class="imagebox">
-                        <img src="img/DSCF2673.jpg" alt="Event Image 1" class="image">
+                        <img src="img/DSCF2673.jpg" alt="Volunteers packing supplies" class="image">
                     </div>
                     <div class="imagebox">
-                        <img src="img/DSCF2711.jpg" alt="Event Image 1" class="image">
+                        <img src="img/DSCF2711.jpg" alt="Volunteers at community event" class="image">
                     </div>
                     <div class="imagebox">
-                        <img src="img/DSCF2705.jpg" alt="Event Image 1" class="image">
+                        <img src="img/DSCF2705.jpg" alt="Group photo of volunteer team" class="image">
                     </div>
                     <div class="imagebox">
-                        <img src="img/DSCF2770.jpg" alt="Event Image 1" class="image">
+                        <img src="img/DSCF2770.jpg" alt="Volunteers handing out donations" class="image">
                     </div>
                     <div class="imagebox">
-                        <img src="img/DSCF2705.jpg" alt="Event Image 1" class="image">
+                        <img src="img/DSCF2724.jpg" alt="Volunteers setting up event tables" class="image">
                     </div>
                     <div class="imagebox">
-                        <img src="img/DSCF2724.jpg" alt="Event Image 1" class="image">
+                        <img src="img/DSCF2735.jpg" alt="Volunteers speaking with attendees" class="image">
                     </div>
                     <div class="imagebox">
-                        <img src="img/DSCF2735.jpg" alt="Event Image 1" class="image">
+                        <img src="img/DSCF2797.jpg" alt="Volunteers at outreach booth" class="image">
                     </div>
                     <div class="imagebox">
-                        <img src="img/DSCF2797.jpg" alt="Event Image 1" class="image">
-                    </div>
-                    <div class="imagebox">
-                        <img src="img/DSCF2807.jpg" alt="Event Image 1" class="image">
+                        <img src="img/DSCF2807.jpg" alt="Volunteer team closing event" class="image">
                     </div>
                 </div>
                 <h2>Volunteer</h2>
                 <p>Join us in our mission to support refugees and their families by volunteering your time and skills.</p>
-                <form>
-                    <input name="name" id="name" placeholder="Name" class="input">
-                    <input name="email" id="email" placeholder="Email" class="input">
+                <form id="form1" action="#" method="post">
+                    <label for="name" class="visually-hidden">Name</label>
+                    <input type="text" name="name" id="name" placeholder="Name" class="input" required>
+                    <label for="email" class="visually-hidden">Email</label>
+                    <input type="email" name="email" id="email" placeholder="Email" class="input" required>
+                    <button type="submit">Submit</button>
                 </form>
-                <button type="submit" form="form1" value="Submit" class="sharebtn">Submit</button>
             </div>
         </section>
-       
+
         <footer class="footer">
             <p>Contact Us</p>
             <div class="social-icons">
-                <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
-                <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <a href="mailto:someone@example.com"><i class="fas fa-envelope"></i></a>
+                <a href="https://www.instagram.com/sfr_uh" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/company/sfr-uh" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:someone@example.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
             </div>
         </footer>
-        
-        
-        
 
     </main>
 
-
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<script>
-document.addEventListener("DOMContentLoaded", function() {
-    fetch('data.json')
-        .then(response => response.json())
-        .then(data => {
-            const lineChartCtx = document.getElementById('lineChart').getContext('2d');
-            const doughnutChartCtx = document.getElementById('doughnutChart').getContext('2d');
-
-            new Chart(lineChartCtx, {
-                type: 'line',
-                data: data.lineChartData,
-                options: {
-                    responsive: true,
-                    scales: {
-                        y: {
-                            beginAtZero: true
-                        }
-                    }
-                }
-            });
-
-            new Chart(doughnutChartCtx, {
-                type: 'doughnut',
-                data: data.doughnutChartData,
-                options: {
-                    responsive: true
-                }
-            });
-        });
-});
-</script>
-
-
 </body>
 </html>
-
