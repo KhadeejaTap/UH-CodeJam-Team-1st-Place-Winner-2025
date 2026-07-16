@@ -1,3 +1,15 @@
+:root {
+    --color-primary: #b3002d;
+    --color-header: #C8102E;
+    --color-news-btn: #960C22;
+    --color-bg-light: #f5f5f5;
+    --color-bg-cream: #FFF9D9;
+    --color-bg-pink: #ffe0e0;
+    --color-text: #333;
+    --color-text-muted: #666;
+
+    --z-header: 100;
+}
 
 .roboto-<uniquifier> {
   font-family: "Roboto", sans-serif;
@@ -5,15 +17,22 @@
   font-weight: <weight>;
   font-style: normal;
   font-variation-settings:
-    "wdth" 100;a
+    "wdth" 100;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
     font-family: "Roboto", Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background: #f5f5f5;
-    /* color: #333; */
+    background: var(--color-bg-light);
+}
+
+.about, .news, .events, .volunteer, .values, .statistics, .commingEvents, .resources, .footer {
+    scroll-margin-top: 70px;
 }
 
 header {
@@ -21,12 +40,12 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 10px 0;
-    background: #C8102E;
+    background: var(--color-header);
     box-shadow: 0 2px 4px rgba(0,0,0,0.5);
     position: fixed;
     width: 100%;
     top: 0;
-    z-index: 1000;
+    z-index: var(--z-header);
 }
 
 img {
@@ -35,7 +54,7 @@ img {
 
 h1 {
     font-size: 2.5em;
-    color: #b3002d;
+    color: var(--color-primary);
 }
 
 h2 {
@@ -85,10 +104,17 @@ main {
 }
 
 .home-content {
-    width: 45%;
+    width: min(45%, 600px);
     color: white;
     background: rgba(0, 0, 0, 0.85);
     padding: 50px 40px 50px 60px;
+}
+
+@media screen and (max-width: 768px) {
+    .home-content {
+        width: 90%;
+        padding: 30px 20px;
+    }
 }
 
 .title {
@@ -98,7 +124,7 @@ main {
 }
 
 .subtitle {
-    color: #C8102E;
+    color: var(--color-header);
     font-size: 1.3em;
     font-weight: 800;
 }
@@ -109,7 +135,7 @@ p {
 }
 
 button {
-    background: #b3002d;
+    background: var(--color-primary);
     color: #fff;
     border: none;
     padding: 10px 20px;
@@ -118,18 +144,13 @@ button {
     font-size: 1em;
 }
 
-button:hover {
-    background: #b3002d;
-}
-
 /* About Section */
 .about {
-    background: #FFF9D9; /* Background color same as blue text */
-    color: #333;
+    background: var(--color-bg-cream);
+    color: var(--color-text);
     text-align: center;
-    padding: calc(33vh - 160px) 20px; 
-    /* Top and bottom padding to create vertical space */
-    min-height: calc(33vh); /* Minimum height to ensure the content takes up 1/3 of the viewport height */
+    padding: clamp(20px, 5vw, 80px) 20px;
+    min-height: 33vh;
 }
 
 .about-content {
@@ -142,11 +163,6 @@ button:hover {
     line-height: 1.6;
 }
 
-/* News */
-.news {
-    width: 100%;
-}
-
 .news-content {
     display: flex;
     margin: auto;
@@ -157,7 +173,7 @@ button:hover {
 
 .news {
     margin: auto;
-    width: 900px;
+    width: min(900px, 95%);
 }
 
 .newstitle {
@@ -175,7 +191,7 @@ button:hover {
     padding: 10px 20px;
     color: white;
     text-decoration: none;
-    background: #960C22;
+    background: var(--color-news-btn);
     border-radius: 5px;
     transition: 0.3s;
 }
@@ -232,7 +248,7 @@ button:hover {
 .volunteer {
     padding: 30px 0;
     text-align: center;
-    background: #FFF9D9;
+    background: var(--color-bg-cream);
 }
 
 .volunteer-content {
@@ -243,7 +259,7 @@ button:hover {
 .input {
     display: block;
     margin: 0 auto 20px;
-    width: 300px;
+    width: min(300px, 90%);
     height: 40px;
 }
 
@@ -251,12 +267,24 @@ button:hover {
     font-size: 1.5em;
 }
 
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
 /* Values Section */
 .values {
-    background: #f5f5f5;
+    background: var(--color-bg-light);
     padding: 50px 20px;
     text-align: center;
-    min-height: calc(67vh); /* Take up two-thirds of the viewport height */
+    min-height: 67vh;
 }
 
 .values-content {
@@ -267,7 +295,7 @@ button:hover {
 .values h2 {
     font-size: 2em;
     margin-bottom: 40px;
-    color: #333;
+    color: var(--color-text);
 }
 
 .value-items {
@@ -291,7 +319,7 @@ button:hover {
 .value-icon {
     font-size: 2em;
     margin-right: 15px;
-    color: #b3002d;
+    color: var(--color-primary);
 }
 
 .value-text {
@@ -301,13 +329,13 @@ button:hover {
 .value-text h3 {
     margin: 0;
     font-size: 1.5em;
-    color: #333;
+    color: var(--color-text);
 }
 
 .value-text p {
     margin: 5px 0 0;
     font-size: 1em;
-    color: #666;
+    color: var(--color-text-muted);
 }
 
 
@@ -325,47 +353,44 @@ button:hover {
 
 .statistics h2 {
     font-size: 2em;
-    /* margin-bottom: 40px; */
-    color: #333;
+    color: var(--color-text);
 }
 
 .charts {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 20px; /* Add space between charts */
+    gap: 20px;
 }
 
 .chart-container {
     flex: 1;
-    max-width: 45%; /* Adjust this to control the width of each chart */
+    max-width: 45%;
     margin: 10px;
 }
 
 .chart-container canvas {
     width: 100%;
-    height: 500px; /* Ensure both charts have the same height */
+    height: 500px;
 }
 
-/* Specific adjustments for the line chart container */
 .line-chart-container {
-    max-width: 45%; /* Match the width of the doughnut chart container */
+    max-width: 45%;
     margin: 10px;
 }
 
 .line-chart-container canvas {
     width: 100%;
-    height: 500px; /* Ensure the height is the same as the doughnut chart */
+    height: 500px;
 }
 
 /* commingEvents */
 .commingEvents {
-    background: #ffe0e0; /* Background color same as blue text */
-    color: #b3002d;
+    background: var(--color-bg-pink);
+    color: var(--color-primary);
     text-align: center;
-    padding: calc(33vh - 300px) 2px; 
-    /* Top and bottom padding to create vertical space */
-    min-height: calc(33vh); /* Minimum height to ensure the content takes up 1/3 of the viewport height */
+    padding: clamp(20px, 5vw, 60px) 2px;
+    min-height: 33vh;
 }
 
 .commingEvents h2 {
@@ -381,25 +406,25 @@ button:hover {
 
 .resources h2 {
     font-size: 2.5em;
-    color: #b3002d;
+    color: var(--color-primary);
     margin-bottom: 40px;
 }
 
 .resource-grid {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    justify-content: center; /* Center the grid content horizontally */
-    align-items: center;     /* Center the grid content vertically */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    justify-content: center;
+    align-items: center;
     gap: 40px;
-    max-width: 1000px; /* Adjust the max-width based on your preference */
-    margin: 0 auto;    /* Center the grid container */
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
 .resource-item {
     display: flex;
     align-items: center;
     text-align: left;
-    max-width: 400px; /* Ensure items don't stretch too wide */
+    max-width: 400px;
 }
 
 .resource-item img {
@@ -411,32 +436,14 @@ button:hover {
 
 .resource-item p {
     font-size: 1.2em;
-    color: #333;
+    color: var(--color-text);
     margin: 0;
-}
-
-@media screen and (max-width: 768px) {
-    .resource-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-
-    .resource-item {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .resource-item img {
-        margin: 0 0 10px 0;
-    }
 }
 
 /* footer */
 .footer {
-    position: relative;
-    bottom: 0;
     width: 100%;
-    background-color: #b3002d; /* Background color */
+    background-color: var(--color-primary);
     padding: 20px 0;
     text-align: center;
     color: white;
@@ -463,11 +470,30 @@ button:hover {
 .social-icons a:hover {
     color: #555;
 }
-/* */
-.autoBlur{
-    animation: autoBlurAnimation linear both;
-    animation-timeline: view();
+
+/* scroll animations — fallback for browsers without animation-timeline */
+@supports (animation-timeline: view()) {
+    .autoBlur{
+        animation: autoBlurAnimation linear both;
+        animation-timeline: view();
+    }
+    .autoShow{
+        animation: autoShowAnimation linear;
+        animation-timeline: view();
+        animation-range: entry 0% cover 40%;
+    }
 }
+
+@supports not (animation-timeline: view()) {
+    .autoBlur{
+        filter: blur(0px);
+    }
+    .autoShow{
+        opacity: 1;
+        transform: translateY(0px) scale(1);
+    }
+}
+
 @keyframes autoBlurAnimation{
     0%{
         filter: blur(30px);
@@ -479,10 +505,7 @@ button:hover {
         filter: blur(30px);
     }
 }
-.autoShow{
-    animation: autoShowAnimation;
-    animation-timeline: view(70% 5%);
-}
+
 @keyframes autoShowAnimation{
     from{
         opacity: 0;
@@ -492,6 +515,3 @@ button:hover {
         transform: translateY(0px) scale(1);
     }
 }
-}
-}
-*/
