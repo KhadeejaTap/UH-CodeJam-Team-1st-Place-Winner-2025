@@ -21,3 +21,8 @@ This project is a custom animated website developed during **UH CodeJam** in Mar
 - Scroll-triggered animations using JavaScript
 - Client-based design structure and layout
 - Clean and organized code for easy readability
+
+## Check it out:
+- clone the repo and cd into it
+- run python3 -m http.server 8000
+- ctrl + click on the url
